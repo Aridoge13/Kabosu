@@ -22,12 +22,12 @@ To revolutionize personalized medicine by integrating multi-omics data, deep lea
 - Phase 4: Web interface deployment (Pending)
 
 ## Technical Stack 
-| Component          | Technology Stack         | Version     |
-|--------------------|--------------------------|-------------|
-| Data Processing    | pandas, numpy, PySAM     | 2.0.3       |
-| Machine Learning   | TensorFlow, scikit-learn | 2.12.0      |
-| Visualization      | Matplotlib, Plotly       | 3.7.1       |
-| Deployment         | Flask, Google Cloud      | 2.3.2       |
+| Component          | Technology Stack                  | Version     |
+|--------------------|-----------------------------------|-------------|
+| Data Processing    | pandas, numpy, PySAM              | 2.0.3       |
+| Machine Learning   | TensorFlow, scikit-learn          | 2.12.0      |
+| Visualization      | Matplotlib, Plotly, Seaborn       | 3.7.1       |
+| Deployment         | Flask, Google Cloud               | 2.3.2       |
 
 
 
