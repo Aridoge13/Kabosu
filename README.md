@@ -54,24 +54,24 @@ flowchart TD
     P --> R[Plots & visualizations]
 
 %% Color definitions (must be at the end, no inline comments)
-    style A fill:#ffebee,stroke:#f44336,color:#000000
-    style B fill:#fff3e0,stroke:#ff9800,color:#000000
-    style C fill:#fff3e0,stroke:#ff9800,color:#000000
-    style D fill:#fff3e0,stroke:#ff9800,color:#000000
-    style E fill:#fffde7,stroke:#ffeb3b,color:#000000
-    style F fill:#fffde7,stroke:#ffeb3b,color:#000000
-    style G fill:#fffde7,stroke:#ffeb3b,color:#000000
-    style H fill:#fffde7,stroke:#ffeb3b,color:#000000
-    style I fill:#e8f5e9,stroke:#4caf50,color:#000000
-    style J fill:#e8f5e9,stroke:#4caf50,color:#000000
-    style K fill:#e8f5e9,stroke:#4caf50,color:#000000
-    style L fill:#e8f5e9,stroke:#4caf50,color:#000000
-    style M fill:#e3f2fd,stroke:#2196f3,color:#000000
-    style N fill:#e3f2fd,stroke:#2196f3,color:#000000
-    style O fill:#e3f2fd,stroke:#2196f3,color:#000000
-    style P fill:#f3e5f5,stroke:#9c27b0,color:#000000
-    style Q fill:#f3e5f5,stroke:#9c27b0,color:#000000
-    style R fill:#f3e5f5,stroke:#9c27b0,color:#000000
+    style A fill:#d32f2f,stroke:#b71c1c,color:#ffffff
+    style B fill:#f57c00,stroke:#e65100,color:#ffffff
+    style C fill:#f57c00,stroke:#e65100,color:#ffffff
+    style D fill:#f57c00,stroke:#e65100,color:#ffffff
+    style E fill:#ffa000,stroke:#ff6f00,color:#ffffff
+    style F fill:#ffa000,stroke:#ff6f00,color:#ffffff
+    style G fill:#ffa000,stroke:#ff6f00,color:#ffffff
+    style H fill:#ffa000,stroke:#ff6f00,color:#ffffff
+    style I fill:#388e3c,stroke:#1b5e20,color:#ffffff
+    style J fill:#388e3c,stroke:#1b5e20,color:#ffffff
+    style K fill:#388e3c,stroke:#1b5e20,color:#ffffff
+    style L fill:#388e3c,stroke:#1b5e20,color:#ffffff
+    style M fill:#1976d2,stroke:#0d47a1,color:#ffffff
+    style N fill:#1976d2,stroke:#0d47a1,color:#ffffff
+    style O fill:#1976d2,stroke:#0d47a1,color:#ffffff
+    style P fill:#7b1fa2,stroke:#4a148c,color:#ffffff
+    style Q fill:#7b1fa2,stroke:#4a148c,color:#ffffff
+    style R fill:#7b1fa2,stroke:#4a148c,color:#ffffff
 ```
 
 ## Technical Stack 
