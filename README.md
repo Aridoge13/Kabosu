@@ -54,22 +54,22 @@ flowchart TD
     P --> R[Plots & visualizations]
 
 %% Color definitions (must be at the end, no inline comments)
-    style A fill:#ff9999,stroke:#ff0000  // Red (input)
-    style B fill:#ffcc99,stroke:#ff8000  // Orange (preprocessing)
+    style A fill:#ff9999,stroke:#ff0000  
+    style B fill:#ffcc99,stroke:#ff8000 
     style C fill:#ffcc99,stroke:#ff8000
     style D fill:#ffcc99,stroke:#ff8000
-    style E fill:#ffff99,stroke:#ffff00  // Yellow (feature engineering)
+    style E fill:#ffff99,stroke:#ffff00  
     style F fill:#ffff99,stroke:#ffff00
     style G fill:#ffff99,stroke:#ffff00
     style H fill:#ffff99,stroke:#ffff00
-    style I fill:#99ff99,stroke:#00cc00  // Green (model training)
+    style I fill:#99ff99,stroke:#00cc00  
     style J fill:#99ff99,stroke:#00cc00
     style K fill:#99ff99,stroke:#00cc00
     style L fill:#99ff99,stroke:#00cc00
-    style M fill:#99ccff,stroke:#0066ff  // Blue (prediction)
+    style M fill:#99ccff,stroke:#0066ff 
     style N fill:#99ccff,stroke:#0066ff
     style O fill:#99ccff,stroke:#0066ff
-    style P fill:#cc99ff,stroke:#8000ff  // Purple (output)
+    style P fill:#cc99ff,stroke:#8000ff  
     style Q fill:#cc99ff,stroke:#8000ff
     style R fill:#cc99ff,stroke:#8000ff
 ```
