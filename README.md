@@ -52,6 +52,26 @@ flowchart TD
     O --> P
     P --> Q[Result tables]
     P --> R[Plots & visualizations]
+
+%% Color definitions
+    style A fill:#ffcccc,stroke:#ff6666  // Light red (input)
+    style B fill:#ffebcc,stroke:#ffb366  // Light orange (preprocessing)
+    style C fill:#ffebcc,stroke:#ffb366
+    style D fill:#ffebcc,stroke:#ffb366
+    style E fill:#ffffcc,stroke:#ffff66  // Light yellow (feature engineering)
+    style F fill:#ffffcc,stroke:#ffff66
+    style G fill:#ffffcc,stroke:#ffff66
+    style H fill:#ffffcc,stroke:#ffff66
+    style I fill:#ccffcc,stroke:#66ff66  // Light green (model training)
+    style J fill:#ccffcc,stroke:#66ff66
+    style K fill:#ccffcc,stroke:#66ff66
+    style L fill:#ccffcc,stroke:#66ff66
+    style M fill:#cce6ff,stroke:#66b3ff  // Light blue (prediction)
+    style N fill:#cce6ff,stroke:#66b3ff
+    style O fill:#cce6ff,stroke:#66b3ff
+    style P fill:#e6ccff,stroke:#b366ff  // Light purple (output)
+    style Q fill:#e6ccff,stroke:#b366ff
+    style R fill:#e6ccff,stroke:#b366ff
 ```
 
 ## Technical Stack 
