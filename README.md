@@ -23,6 +23,7 @@ To revolutionize personalized medicine by integrating multi-omics data, deep lea
 
 ## Current Development Flowchart
 
+```mermaid
 flowchart TD
     A[Raw Omics Data] --> B[Data Preprocessing]
     B --> C[Transcriptome normalization]
@@ -51,6 +52,7 @@ flowchart TD
     O --> P
     P --> Q[Result tables]
     P --> R[Plots & visualizations]
+```
 
 ## Technical Stack 
 | Component          | Technology Stack                  | Version     |
