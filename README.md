@@ -23,7 +23,7 @@ To revolutionize personalized medicine by integrating multi-omics data, deep lea
 
 ## Current Development Flowchart
 
-![Flowchart](Kabosu/images/Kabosu.png)
+![Flowchart](images/Kabosu.png)
 
 ## Technical Stack 
 | Component          | Technology Stack                  | Version     |
