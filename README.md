@@ -23,7 +23,34 @@ To revolutionize personalized medicine by integrating multi-omics data, deep lea
 
 ## Current Development Flowchart
 
-![Flowchart](images/Kabosu.png)
+flowchart TD
+    A[Raw Omics Data] --> B[Data Preprocessing]
+    B --> C[Transcriptome normalization]
+    B --> D[Gene filtering]
+    
+    C --> E[Feature Engineering]
+    D --> E
+    E --> F[Expression profiles]
+    E --> G[Variant frequency]
+    E --> H[Pathway signatures]
+    
+    F --> I[Model Training]
+    G --> I
+    H --> I
+    I --> J[Logistic regression]
+    I --> K[Random forest]
+    I --> L[Neural networks]
+    
+    J --> M[Risk Prediction]
+    K --> M
+    L --> M
+    M --> N[Classification labels]
+    M --> O[Probabilistic scores]
+    
+    N --> P[Output & Reporting]
+    O --> P
+    P --> Q[Result tables]
+    P --> R[Plots & visualizations]
 
 ## Technical Stack 
 | Component          | Technology Stack                  | Version     |
