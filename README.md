@@ -21,6 +21,32 @@ To revolutionize personalized medicine by integrating multi-omics data, deep lea
 - Phase 3: Deep learning integration (Pending)
 - Phase 4: Web interface deployment (Pending)
 
+## Current Development Flowchart
+[ Raw Omics Data ] 
+       ↓
+[ Data Preprocessing ]
+  - Transcriptome normalization
+  - Gene filtering
+       ↓
+[ Feature Engineering ]
+  - Expression profiles
+  - Variant frequency
+  - Pathway signatures
+       ↓
+[ Model Training ]
+  - Logistic regression
+  - Random forest
+  - Neural networks
+       ↓
+[ Risk Prediction ]
+  - Classification labels
+  - Probabilistic scores
+       ↓
+[ Output & Reporting ]
+  - Result tables
+  - Plots & visualizations
+
+
 ## Technical Stack 
 | Component          | Technology Stack                  | Version     |
 |--------------------|-----------------------------------|-------------|
