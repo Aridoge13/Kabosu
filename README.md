@@ -53,25 +53,25 @@ flowchart TD
     P --> Q[Result tables]
     P --> R[Plots & visualizations]
 
- %% Color definitions (must be at the end, no inline comments)
-    style A fill:#ffcccc,stroke:#ff6666
-    style B fill:#ffebcc,stroke:#ffb366
-    style C fill:#ffebcc,stroke:#ffb366
-    style D fill:#ffebcc,stroke:#ffb366
-    style E fill:#ffffcc,stroke:#ffff66
-    style F fill:#ffffcc,stroke:#ffff66
-    style G fill:#ffffcc,stroke:#ffff66
-    style H fill:#ffffcc,stroke:#ffff66
-    style I fill:#ccffcc,stroke:#66ff66
-    style J fill:#ccffcc,stroke:#66ff66
-    style K fill:#ccffcc,stroke:#66ff66
-    style L fill:#ccffcc,stroke:#66ff66
-    style M fill:#cce6ff,stroke:#66b3ff
-    style N fill:#cce6ff,stroke:#66b3ff
-    style O fill:#cce6ff,stroke:#66b3ff
-    style P fill:#e6ccff,stroke:#b366ff
-    style Q fill:#e6ccff,stroke:#b366ff
-    style R fill:#e6ccff,stroke:#b366ff
+%% Color definitions (must be at the end, no inline comments)
+    style A fill:#ff9999,stroke:#ff0000  // Red (input)
+    style B fill:#ffcc99,stroke:#ff8000  // Orange (preprocessing)
+    style C fill:#ffcc99,stroke:#ff8000
+    style D fill:#ffcc99,stroke:#ff8000
+    style E fill:#ffff99,stroke:#ffff00  // Yellow (feature engineering)
+    style F fill:#ffff99,stroke:#ffff00
+    style G fill:#ffff99,stroke:#ffff00
+    style H fill:#ffff99,stroke:#ffff00
+    style I fill:#99ff99,stroke:#00cc00  // Green (model training)
+    style J fill:#99ff99,stroke:#00cc00
+    style K fill:#99ff99,stroke:#00cc00
+    style L fill:#99ff99,stroke:#00cc00
+    style M fill:#99ccff,stroke:#0066ff  // Blue (prediction)
+    style N fill:#99ccff,stroke:#0066ff
+    style O fill:#99ccff,stroke:#0066ff
+    style P fill:#cc99ff,stroke:#8000ff  // Purple (output)
+    style Q fill:#cc99ff,stroke:#8000ff
+    style R fill:#cc99ff,stroke:#8000ff
 ```
 
 ## Technical Stack 
