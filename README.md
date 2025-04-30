@@ -54,24 +54,24 @@ flowchart TD
     P --> R[Plots & visualizations]
 
 %% Color definitions (must be at the end, no inline comments)
-    style A fill:#ff9999,stroke:#ff0000  
-    style B fill:#ffcc99,stroke:#ff8000 
-    style C fill:#ffcc99,stroke:#ff8000
-    style D fill:#ffcc99,stroke:#ff8000
-    style E fill:#ffff99,stroke:#ffff00  
-    style F fill:#ffff99,stroke:#ffff00
-    style G fill:#ffff99,stroke:#ffff00
-    style H fill:#ffff99,stroke:#ffff00
-    style I fill:#99ff99,stroke:#00cc00  
-    style J fill:#99ff99,stroke:#00cc00
-    style K fill:#99ff99,stroke:#00cc00
-    style L fill:#99ff99,stroke:#00cc00
-    style M fill:#99ccff,stroke:#0066ff 
-    style N fill:#99ccff,stroke:#0066ff
-    style O fill:#99ccff,stroke:#0066ff
-    style P fill:#cc99ff,stroke:#8000ff  
-    style Q fill:#cc99ff,stroke:#8000ff
-    style R fill:#cc99ff,stroke:#8000ff
+    style A fill:#ffebee,stroke:#f44336,color:#000000
+    style B fill:#fff3e0,stroke:#ff9800,color:#000000
+    style C fill:#fff3e0,stroke:#ff9800,color:#000000
+    style D fill:#fff3e0,stroke:#ff9800,color:#000000
+    style E fill:#fffde7,stroke:#ffeb3b,color:#000000
+    style F fill:#fffde7,stroke:#ffeb3b,color:#000000
+    style G fill:#fffde7,stroke:#ffeb3b,color:#000000
+    style H fill:#fffde7,stroke:#ffeb3b,color:#000000
+    style I fill:#e8f5e9,stroke:#4caf50,color:#000000
+    style J fill:#e8f5e9,stroke:#4caf50,color:#000000
+    style K fill:#e8f5e9,stroke:#4caf50,color:#000000
+    style L fill:#e8f5e9,stroke:#4caf50,color:#000000
+    style M fill:#e3f2fd,stroke:#2196f3,color:#000000
+    style N fill:#e3f2fd,stroke:#2196f3,color:#000000
+    style O fill:#e3f2fd,stroke:#2196f3,color:#000000
+    style P fill:#f3e5f5,stroke:#9c27b0,color:#000000
+    style Q fill:#f3e5f5,stroke:#9c27b0,color:#000000
+    style R fill:#f3e5f5,stroke:#9c27b0,color:#000000
 ```
 
 ## Technical Stack 
