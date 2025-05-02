@@ -1,9 +1,14 @@
 # Kabosu
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Python](https://img.shields.io/badge/python-3.9%2B-blue)
+![GitHub issues](https://img.shields.io/github/issues/Aridoge13/Kabosu)
+![GitHub last commit](https://img.shields.io/github/last-commit/Aridoge13/Kabosu)
 
 ## Mission
-To revolutionize personalized medicine by integrating multi-omics data, deep learning, and pharmacological bioinformatics to predict disease risk, diagnose conditions, and recommend optimal therapies.
+To revolutionize personalized medicine by integrating multi-omics data, deep learning, and pharmacological bioinformatics to predict disease risk, diagnose conditions, and recommend optimal therapies. 
+
+Inspired by Kabosu, the Doge meme icon - symbolizing the project's mission to bring joy through better healthcare. 🐕💊
 
 
 ## Current Status
@@ -20,6 +25,19 @@ To revolutionize personalized medicine by integrating multi-omics data, deep lea
 - Phase 2: Baseline ML models (Pending)
 - Phase 3: Deep learning integration (Pending)
 - Phase 4: Web interface deployment (Pending)
+
+```mermaid
+flowchart TD
+    A [Data preprocessing pipeline] --> B[Baseline ML models (Pending)]
+    B --> C[Deep learning integration (Pending)]
+    C --> D[Web interface deployment (Pending)]
+
+%% Color definitions
+    style A fill:#f57c00,stroke:#e65100,color:#ffffff
+    style B fill:#388e3c,stroke:#1b5e20,color:#ffffff
+    style C fill:#1976d2,stroke:#0d47a1,color:#ffffff
+    style D fill:#7b1fa2,stroke:#4a148c,color:#ffffff
+```
 
 ## Current Development Flowchart
 
@@ -53,7 +71,7 @@ flowchart TD
     P --> Q[Result tables]
     P --> R[Plots & visualizations]
 
-%% Color definitions (must be at the end, no inline comments)
+%% Color definitions
     style A fill:#d32f2f,stroke:#b71c1c,color:#ffffff
     style B fill:#f57c00,stroke:#e65100,color:#ffffff
     style C fill:#f57c00,stroke:#e65100,color:#ffffff
@@ -125,6 +143,3 @@ See [LICENSE](License.md) for full terms.
 For questions or support, 
 please contact: aritra.mukherjee98@gmail.com
 
-
-## Message 
-Inspired by Kabosu, the Doge meme icon - symbolizing the project's mission to bring joy through better healthcare. 🐕💊
