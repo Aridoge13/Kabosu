@@ -28,7 +28,7 @@ Inspired by Kabosu, the Doge meme icon - symbolizing the project's mission to br
 
 ```mermaid
 flowchart TD
-    A [Data preprocessing pipeline] --> B[Baseline ML models (Pending)]
+    A[Data preprocessing pipeline] --> B[Baseline ML models (Pending)]
     B --> C[Deep learning integration (Pending)]
     C --> D[Web interface deployment (Pending)]
 
