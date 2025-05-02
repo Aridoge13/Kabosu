@@ -5,21 +5,24 @@
 ![GitHub issues](https://img.shields.io/github/issues/Aridoge13/Kabosu)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Aridoge13/Kabosu)
 
+---
 ## Mission
 To revolutionize personalized medicine by integrating multi-omics data, deep learning, and pharmacological bioinformatics to predict disease risk, diagnose conditions, and recommend optimal therapies. 
 
 Inspired by Kabosu, the Doge meme icon - symbolizing the project's mission to bring joy through better healthcare. 🐕💊
 
-
+---
 ## Current Status
 **Active Development**: The preprocessing pipeline has been built and we are currently curating training data from public datasets 
 
+---
 ## Key Features (Planned)
 - **Multi-Omics Integration**: Combine transcriptomics, genomics, and clinical data
 - **Disease Prediction**: Machine learning models for risk assessment and diagnosis
 - **Therapy Recommendations**: AI-driven personalized treatment suggestions
 - **In Silico Testing**: Simulate drug effects on patient-specific pathways
 
+---
 ## Roadmap 
 - Phase 1: Data preprocessing pipeline
 - Phase 2: Baseline ML models (Pending)
@@ -39,6 +42,7 @@ flowchart TD
     style D fill:#7b1fa2,stroke:#4a148c,color:#ffffff
 ```
 
+---
 ## Current Development Flowchart
 
 ```mermaid
@@ -92,6 +96,7 @@ flowchart TD
     style R fill:#7b1fa2,stroke:#4a148c,color:#ffffff
 ```
 
+---
 ## Technical Stack 
 | Component          | Technology Stack                  | Version     |
 |--------------------|-----------------------------------|-------------|
@@ -101,7 +106,7 @@ flowchart TD
 | Deployment         | Flask, Google Cloud               | 2.3.2       |
 
 
-
+---
 ## Installation
 
 ### Prerequisites
@@ -121,10 +126,11 @@ conda activate kabosu
 # Install core dependencies
 pip install biopython matplotlib pandas numpy pysam seaborn scikit-learn tensorflow 
 ```
-
+---
 ## Contribution
 Contributions are welcome. Please submit issues or pull requests following the project guidelines.
 
+---
 ### Contributing
 We welcome contributions! Please:
 1. Fork the repository
@@ -133,12 +139,11 @@ We welcome contributions! Please:
 4. Push to the branch (git push origin feature/AmazingFeature)
 5. Open a Pull Request
 
-
-
-
+---
 ## License
 See [LICENSE](License.md) for full terms.
 
+---
 ## Contact
 For questions or support, 
 please contact: aritra.mukherjee98@gmail.com
