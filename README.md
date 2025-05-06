@@ -13,8 +13,18 @@ Inspired by Kabosu, the Doge meme icon - symbolizing the project's mission to br
 
 ---
 ## Current Status
-**Active Development:** The preprocessing pipeline, the basic random forest ML model and a basic Neural Network has been built. We are checking for issues that might arise.
-**Data Mining:** We are currently curating training data from public biological datasets and databases.
+**Active Development:** 
+- Preprocessing pipeline built (cleaning, scaling, feature selection).
+- Baseline models created:
+    - Random Forest (interpretable, hyperparameter-tuned).
+    - Neural Network (2-layer, dropout-regularized).
+- Debugging performance issues (class imbalance, overfitting).
+
+**Data Mining:** 
+- Aggregating relevant public datasets to enhance training data.
+
+**Data Scraping:** 
+- Extracting structured genomic, transcriptomic, proteomic, and clinical data from NIH, NCBI & TCGA.
 
 ---
 ## Key Features (Planned)
@@ -103,7 +113,7 @@ flowchart TD
 |--------------------|-----------------------------------|-------------|
 | Data Processing    | pandas, numpy, PySAM              | 2.0.3       |
 | Machine Learning   | TensorFlow, scikit-learn          | 2.12.0      |
-| Visualization      | Matplotlib, Plotly, SHAP,         | 3.7.1       |
+| Visualization      | Matplotlib, Plotly, Seaborn       | 3.7.1       |
 | Deployment         | Flask, Google Cloud               | 2.3.2       |
 
 
@@ -125,7 +135,12 @@ conda create -n kabosu python=3.9
 conda activate kabosu
 
 # Install core dependencies
-pip install biopython matplotlib pandas numpy pysam seaborn scikit-learn tensorflow 
+pip install biopython matplotlib pandas numpy pysam seaborn scikit-learn tensorflow shap joblib
+
+# If you are unable to install tensorflow with pip, please activate the conda environment and install the dependencies on conda
+
+# Installing core dependencies on conda 
+conda install biopython matplotlib pandas numpy pysam seaborn scikit-learn tensorflow shap joblib
 ```
 ---
 ## Contribution
