@@ -13,7 +13,8 @@ Inspired by Kabosu, the Doge meme icon - symbolizing the project's mission to br
 
 ---
 ## Current Status
-**Active Development**: The preprocessing pipeline has been built and we are currently curating training data from public datasets 
+**Active Development:** The preprocessing pipeline, the basic random forest ML model and a basic Neural Network has been built. We are checking for issues that might arise.
+**Data Mining:** We are currently curating training data from public biological datasets and databases.
 
 ---
 ## Key Features (Planned)
@@ -24,9 +25,9 @@ Inspired by Kabosu, the Doge meme icon - symbolizing the project's mission to br
 
 ---
 ## Roadmap 
-- Phase 1: Data preprocessing pipeline
-- Phase 2: Baseline ML models (Pending)
-- Phase 3: Deep learning integration (Pending)
+- Phase 1: Data preprocessing pipeline (complete)
+- Phase 2: Baseline ML models (In progress)
+- Phase 3: Deep learning integration (In progress)
 - Phase 4: Web interface deployment (Pending)
 
 ```mermaid
@@ -102,7 +103,7 @@ flowchart TD
 |--------------------|-----------------------------------|-------------|
 | Data Processing    | pandas, numpy, PySAM              | 2.0.3       |
 | Machine Learning   | TensorFlow, scikit-learn          | 2.12.0      |
-| Visualization      | Matplotlib, Plotly, Seaborn       | 3.7.1       |
+| Visualization      | Matplotlib, Plotly, SHAP,         | 3.7.1       |
 | Deployment         | Flask, Google Cloud               | 2.3.2       |
 
 
