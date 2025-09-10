@@ -10,8 +10,8 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 # Load data
-data = pd.read_csv("data/transcriptomic_data.csv")
-labels = pd.read_csv("data/labels.csv")
+data = pd.read_csv(input("path to data:"))
+labels = pd.read_csv(input("path to labels:"))
 
 # Validate data
 assert len(data) == len(labels), "Mismatched samples!"
@@ -60,4 +60,4 @@ pd.DataFrame(X_test).to_csv("data/X_test.csv", index=False)
 pd.DataFrame(y_train).to_csv("data/y_train.csv", index=False)
 pd.DataFrame(y_test).to_csv("data/y_test.csv", index=False)
 logging.info("Preprocessing completed successfully!")
-# Save the preprocessed data
+

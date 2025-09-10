@@ -4,7 +4,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import RocCurveDisplay
 from sklearn.preprocessing import StandardScaler
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import joblib
 from sklearn.ensemble import RandomForestClassifier
@@ -14,7 +13,7 @@ from sklearn.metrics import (classification_report,
                              ConfusionMatrixDisplay)
 from sklearn.model_selection import GridSearchCV
 import tensorflow as tf
-from tensorflow.keras import layers, callbacks
+from keras import layers, callbacks
 import shap
 
 # 1. Random Forest Baseline Model
@@ -22,7 +21,7 @@ print("Training Random Forest Baseline...")
 
 # Load or define datasets
 # Replace with your dataset path
-data = pd.read_csv("/home/jijo/Projects/Kabosu/data/dataset.csv")
+data = pd.read_csv(input("Path to dataset"))
 # Replace "target" with your target column name
 X = data.drop(columns=["target"])
 y = data["target"]
@@ -47,8 +46,16 @@ print("\nRandom Forest Performance:")
 print(classification_report(y_test, y_pred))
 print(f"AUC-ROC: {roc_auc_score(y_test, y_proba):.3f}")
 
+# Confusion Matrix for Random Forest
+cm_rf = confusion_matrix(y_test, y_pred)
+ConfusionMatrixDisplay(cm_rf).plot()
+plt.title("Random Forest Confusion Matrix")
+plt.tight_layout()
+plt.savefig(input("Provide path to save Random Forest confusion matrix:"))
+plt.close()
+
 # Save model
-joblib.dump(rf_model, "/home/jijo/Projects/Kabosu/models/kabosu_rf.pkl")
+joblib.dump(rf_model, input("provide path to save the model"))
 
 # 2. Hyperparameter Tuning
 print("\nPerforming Hyperparameter Tuning...")
@@ -86,7 +93,7 @@ plt.barh(importances['Transcript'][:20], importances['Importance'][:20])
 plt.title("Top 20 Important Transcripts")
 plt.xlabel("Feature Importance Score")
 plt.tight_layout()
-plt.savefig("/home/jijo/Projects/Kabosu/plots/feature_importance.png")
+plt.savefig(input("provide path to save the figures:"))
 plt.close()
 
 # SHAP Analysis (sample 100 instances for speed)
@@ -96,10 +103,10 @@ shap_values = explainer.shap_values(X_test.iloc[:100])
 plt.figure()
 shap.summary_plot(shap_values, X_test.iloc[:100], plot_type="bar", show=False)
 plt.tight_layout()
-plt.savefig("/home/jijo/Projects/Kabosu/plots/shap_summary.png")
+plt.savefig(input("Provide path to save the SHAP summary figure"))
 plt.close()
 
-# 4. Neural Network Model
+# Neural Network Model
 print("\nTraining Neural Network...")
 
 # Normalize data for NN
@@ -155,9 +162,17 @@ nn_pred = (nn_model.predict(X_test_scaled) > 0.5).astype(int)
 print("\nNeural Network Performance:")
 print(classification_report(y_test, nn_pred))
 
+# Confusion Matrix for Neural Network
+cm_nn = confusion_matrix(y_test, nn_pred)
+ConfusionMatrixDisplay(cm_nn).plot()
+plt.title("Neural Network Confusion Matrix")
+plt.tight_layout()
+plt.savefig(input("Provide path to save Neural Network confusion matrix:"))
+plt.close()
+
 # Save model and scaler
-nn_model.save("/home/jijo/Projects/Kabosu/models/kabosu_nn.h5")
-joblib.dump(scaler, "/home/jijo/Projects/Kabosu/models/nn_scaler.pkl")
+nn_model.save(input("Provide the path to save the Neural Network Model"))
+joblib.dump(scaler, input("Provide path to save the scaler"))
 
 # 5. Model Comparison
 print("\nComparing Model Performance:")
@@ -174,7 +189,7 @@ RocCurveDisplay.from_estimator(
 plt.title('ROC Curve Comparison')
 plt.plot([0, 1], [0, 1], 'k--')
 plt.tight_layout()
-plt.savefig("/home/jijo/Projects/Kabosu/plots/roc_comparison.png")
+plt.savefig(input("Provide the path to save the figure for ROC comparison"))
 plt.close()
 
 print("\nKabosu model training complete!")

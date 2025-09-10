@@ -7,24 +7,38 @@
 
 ---
 ## Mission
-To revolutionize personalized medicine by integrating multi-omics data, deep learning, and pharmacological bioinformatics to predict disease risk, diagnose conditions, and recommend optimal therapies. 
+To revolutionize personalized medicine by integrating multi-omics data, deep learning, and pharmacological bioinformatics to predict disease risk, help physicians and doctor diagnose conditions with more accuracy, and recommend optimal therapies and treatments. 
 
-Inspired by Kabosu, the Doge meme icon - symbolizing the project's mission to bring joy through better healthcare. 🐕💊
+Inspired by Kabosu, the Doge meme icon - symbolizing the project's mission to bring joy and hope through better healthcare. 🐕💊
 
 ---
 ## Current Status
-**Active Development:** 
-- Preprocessing pipeline built (cleaning, scaling, feature selection).
-- Baseline models created:
-    - Random Forest (interpretable, hyperparameter-tuned).
-    - Neural Network (2-layer, dropout-regularized).
-- Debugging performance issues (class imbalance, overfitting).
+**Project Status: Active Development**
+Kabosu is currently in active development. The core machine learning pipeline is established, and we are focused on enhancing model performance and expanding our dataset.
 
-**Data Mining:** 
-- Aggregating relevant public datasets to enhance training data.
+**Current Implementation**
+- Preprocessing Pipeline: Complete. Handles data cleaning, normalization, scaling, and feature selection for genomic data.
 
-**Data Scraping:** 
-- Extracting structured genomic, transcriptomic, proteomic, and clinical data from NIH, NCBI & TCGA.
+- Model Development:
+    - Random Forest: A robust, interpretable baseline model. Hyperparameter tuning has been performed to optimize performance.
+    - Neural Network: A deep learning model (2-layer architecture with dropout regularization) is implemented for complex pattern recognition.
+
+- Current Focus: Debugging and improving model performance, specifically addressing challenges like class imbalance and overfitting.
+
+**Data Acquisition & Curation**
+To build a powerful and generalizable model, we are aggregating a large-scale, diverse dataset.
+
+- Data Mining: Actively curating relevant public datasets to enhance the quality and quantity of training data.
+
+- Data Scraping: Developing automated tools to extract structured genomic, transcriptomic, proteomic, and clinical data from trusted public repositories including:
+
+    - NIH (National Institutes of Health)
+    - NCBI (National Center for Biotechnology Information)
+    - TCGA (The Cancer Genome Atlas)
+
+**Automation & Workflow**
+- Snakemake Pipeline: We are building a scalable and reproducible workflow using Snakemake. This pipeline will automate the entire process from raw data preprocessing to model training and final result generation, ensuring consistency and ease of use.
+
 
 ---
 ## Key Features (Planned)
@@ -135,7 +149,7 @@ conda create -n kabosu python=3.9
 conda activate kabosu
 
 # Install core dependencies
-pip install biopython matplotlib pandas numpy pysam seaborn scikit-learn tensorflow shap joblib
+pip install biopython matplotlib pandas numpy pysam seaborn scikit-learn tensorflow shap joblib snakemake
 
 # If you are unable to install tensorflow with pip, please activate the conda environment and install the dependencies on conda
 
