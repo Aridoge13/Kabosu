@@ -42,7 +42,7 @@ X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 joblib.dump(scaler, "models/scaler.pkl")
 
-# Feature selection (optional)
+# Feature selection
 selector = SelectKBest(f_classif, k=100)
 X_train = selector.fit_transform(X_train, y_train)
 X_test = selector.transform(X_test)
