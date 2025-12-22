@@ -52,6 +52,27 @@ Core principles:
 
 ## Versioned Roadmap (Authoritative)
 
+```mermaid
+flowchart LR
+    A[v0.1–v0.6<br/>Dataset-local analysis<br/>(Tabular only)]
+    B[v0.7–v0.8<br/>Cross-dataset synthesis]
+    C[v0.9<br/>Unified tabular abstraction]
+    D[v1.0–v1.9<br/>Progressive genomic integration]
+    E[v2.0<br/>Consolidated system]
+
+    A -->|Isolated analysis| B
+    B -->|Stability & equivalence| C
+    C -->|Documented failures| D
+    D -->|Ablation & stress tests| E
+
+    style A fill:#f57c00,stroke:#e65100,color:#ffffff
+    style B fill:#ffa000,stroke:#ff6f00,color:#ffffff
+    style C fill:#388e3c,stroke:#1b5e20,color:#ffffff
+    style D fill:#1976d2,stroke:#0d47a1,color:#ffffff
+    style E fill:#7b1fa2,stroke:#4a148c,color:#ffffff
+
+```
+
 ### v0.1 – v0.6: Dataset-local analysis (Tabular only)
 Each public dataset is analyzed **in isolation** to identify:
 - signal vs noise
@@ -183,6 +204,6 @@ Open an issue before major contributions.
 MIT License: [LICENSE](License.md)
 
 ## Contact
-Email: aritra.mukherjee98@gmail.com
-Linkedin: www.linkedin.com/in/aritra-mukherjee-82b070125
-ORCID: https://orcid.org/0000-0002-6061-611X
+- Email: aritra.mukherjee98@gmail.com
+- Linkedin: www.linkedin.com/in/aritra-mukherjee-82b070125
+- ORCID: https://orcid.org/0000-0002-6061-611X
