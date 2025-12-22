@@ -55,15 +55,14 @@ Core principles:
 ```mermaid
 flowchart LR
     A["v0.1–v0.6<br/>Dataset-local analysis<br/>(Tabular only)"]
-    B["v0.7–v0.8<br/>Cross-dataset synthesis"]
-    C["v0.9<br/>Unified tabular abstraction"]
-    D["v1.0–v1.9<br/>Progressive genomic integration"]
-    E["v2.0<br/>Consolidated system"]
+    
+    
+    
 
-    A -->|Isolated analysis| B
-    B -->|Stability & equivalence| C
-    C -->|Documented failures| D
-    D -->|Ablation & stress tests| E
+    A -- |Isolated analysis| --> B["v0.7–v0.8<br/>Cross-dataset synthesis"]
+    B -- |Stability & equivalence| --> C["v0.9<br/>Unified tabular abstraction"]
+    C -- |Documented failures| --> D["v1.0–v1.9<br/>Progressive genomic integration"]
+    D -- |Ablation & stress tests| --> E["v2.0<br/>Consolidated system"]
 
     style A fill:#f57c00,stroke:#e65100,color:#ffffff
     style B fill:#ffa000,stroke:#ff6f00,color:#ffffff
