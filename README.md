@@ -2,179 +2,187 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
-![GitHub issues](https://img.shields.io/github/issues/Aridoge13/Kabosu)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Aridoge13/Kabosu)
 
 ---
-## Mission
-To revolutionize personalized medicine by integrating multi-omics data, deep learning, and pharmacological bioinformatics to predict disease risk, help physicians and doctor diagnose conditions with more accuracy, and recommend optimal therapies and treatments. 
 
-Inspired by Kabosu, the Doge meme icon - symbolizing the project's mission to bring joy and hope through better healthcare. 🐕💊
+## Overview
+
+**Kabosu** is a research framework for studying **robust disease risk modeling across heterogeneous public datasets**, with a long-term goal of **biologically grounded, multi-modal integration**.
+
+The project deliberately prioritizes:
+- data understanding over premature modeling  
+- cross-dataset synthesis over single-dataset performance  
+- biological constraints over metric chasing  
+
+**Kabosu** is a research framework for studying **robust disease risk modeling across heterogeneous public datasets**, with a long-term goal of **biologically grounded, multi-modal integration**.
+
+The project deliberately prioritizes:
+- data understanding over premature modeling  
+- cross-dataset synthesis over single-dataset performance  
+- biological constraints over metric chasing  
+
+Kabosu is **not a clinical or diagnostic tool** and makes **no diagnostic or therapeutic claims**.  
+
+Its long-term research objective is to inform the development of **transparent, biologically constrained decision-support methodologies** that could, in the future, contribute to clinician-facing systems after appropriate validation.
+
 
 ---
+
+## Project Philosophy
+
+**Do Only Good Everyday**: a commitment to methodological rigor, transparency, and harm minimization in computational health research.
+
+Most ML-for-health projects fail because they:
+- overfit single datasets
+- ignore dataset shift
+- treat genomics as feature concatenation
+- optimize metrics instead of understanding failure modes
+
+Kabosu is explicitly designed to avoid these traps.
+
+Core principles:
+- **Analysis before models**
+- **Synthesis before integration**
+- **Ablation before expansion**
+- **Biology as constraint, not decoration**
+
+
+---
+
+## Versioned Roadmap (Authoritative)
+
+### v0.1 – v0.6: Dataset-local analysis (Tabular only)
+Each public dataset is analyzed **in isolation** to identify:
+- signal vs noise
+- label instability
+- feature fragility
+- dataset-specific artefacts
+
+No cross-dataset modeling.  
+No genomics.
+
+Deliverables:
+- dataset reports
+- negative results
+- failure characterizations
+
+---
+
+### v0.7 – v0.8: Cross-dataset synthesis
+Insights from multiple tabular datasets are synthesized to study:
+- feature equivalence classes
+- stability across populations
+- agreement / disagreement in direction of effect
+- domain shift behavior
+
+This phase is **analysis**, not model building.
+
+---
+
+### v0.9: Unified tabular abstraction
+A single tabular model is constructed **only after synthesis** to test:
+- whether abstractions generalize
+- which signals survive dataset shift
+
+This model is diagnostic, not final.
+
+---
+
+### v1.0 – v1.9: Progressive genomic integration
+Genomic data is integrated **incrementally**, not all at once.
+
+Each genomic modality is admitted **only if it addresses a documented failure** from earlier versions.
+
+Planned progression:
+- Genetic risk layers (e.g. GWAS-level summaries)
+- Expression / regulatory signals
+- Pathway and network constraints
+- Interaction-aware biological structure
+
+Every layer is stress-tested and ablated.
+
+---
+
+### v2.0: Consolidated system
+v2.0 is a **minimal, biologically constrained framework** containing:
+- only components that survived ablation
+- documented contributions and failure modes
+- explicit limits of validity
+
+---
+
 ## Current Status
-**Project Status: Active Development**
-Kabosu is currently in active development. The core machine learning pipeline is established, and we are focused on enhancing model performance and expanding our dataset.
 
-**Current Implementation**
-- Preprocessing Pipeline: Complete. Handles data cleaning, normalization, scaling, and feature selection for genomic data.
+**Status:** Active research development  
+**Current focus:** v0.x dataset-local analysis and synthesis
 
-- Model Development:
-    - Random Forest: A robust, interpretable baseline model. Hyperparameter tuning has been performed to optimize performance.
-    - Neural Network: A deep learning model (2-layer architecture with dropout regularization) is implemented for complex pattern recognition.
+What Kabosu currently does:
+- exploratory and confirmatory analysis of public tabular health datasets
+- investigation of feature stability and dataset shift
+- controlled experiments on synthetic adversarial test data
 
-- Current Focus: Debugging and improving model performance, specifically addressing challenges like class imbalance and overfitting.
-
-**Data Acquisition & Curation**
-To build a powerful and generalizable model, we are aggregating a large-scale, diverse dataset.
-
-- Data Mining: Actively curating relevant public datasets to enhance the quality and quantity of training data.
-
-- Data Scraping: Developing automated tools to extract structured genomic, transcriptomic, proteomic, and clinical data from trusted public repositories including:
-
-    - NIH (National Institutes of Health)
-    - NCBI (National Center for Biotechnology Information)
-    - TCGA (The Cancer Genome Atlas)
-
-**Automation & Workflow**
-- Snakemake Pipeline: We are building a scalable and reproducible workflow using Snakemake. This pipeline will automate the entire process from raw data preprocessing to model training and final result generation, ensuring consistency and ease of use.
-
+What Kabosu does **not** yet do:
+- clinical prediction
+- multi-omics integration
+- deployment-facing inference
 
 ---
-## Key Features (Planned)
-- **Multi-Omics Integration**: Combine transcriptomics, genomics, and clinical data
-- **Disease Prediction**: Machine learning models for risk assessment and diagnosis
-- **Therapy Recommendations**: AI-driven personalized treatment suggestions
-- **In Silico Testing**: Simulate drug effects on patient-specific pathways
+
+## Synthetic Testing Strategy
+
+Synthetic data is used **only** for adversarial testing:
+- covariate shift
+- label noise injection
+- missing-not-at-random simulation
+- spurious correlation stress tests
+
+Synthetic agreement alone is **not considered validation**.
 
 ---
-## Roadmap 
-- Phase 1: Data preprocessing pipeline (complete)
-- Phase 2: Baseline ML models (In progress)
-- Phase 3: Deep learning integration (In progress)
-- Phase 4: Web interface deployment (Pending)
 
-```mermaid
-flowchart TD
-    A[Data preprocessing pipeline] --> B[Baseline ML models]
-    B --> C[Deep learning integration]
-    C --> D[Web interface deployment]
+## Technical Stack (subject to change)
 
-%% Color definitions
-    style A fill:#f57c00,stroke:#e65100,color:#ffffff
-    style B fill:#388e3c,stroke:#1b5e20,color:#ffffff
-    style C fill:#1976d2,stroke:#0d47a1,color:#ffffff
-    style D fill:#7b1fa2,stroke:#4a148c,color:#ffffff
-```
+| Component | Tools |
+|---------|------|
+| Data analysis | pandas, numpy |
+| ML (experimental) | scikit-learn, lightgbm |
+| Visualization | matplotlib, seaborn |
+| Workflow (planned) | Snakemake |
+| Genomics (future) | biopython, pysam |
+
+Dependencies evolve with project phases.
 
 ---
-## Current Development Flowchart
 
-```mermaid
-flowchart TD
-    A[Raw Omics Data] --> B[Data Preprocessing]
-    B --> C[Transcriptome normalization]
-    B --> D[Gene filtering]
-    
-    C --> E[Feature Engineering]
-    D --> E
-    E --> F[Expression profiles]
-    E --> G[Variant frequency]
-    E --> H[Pathway signatures]
-    
-    F --> I[Model Training]
-    G --> I
-    H --> I
-    I --> J[Logistic regression]
-    I --> K[Random forest]
-    I --> L[Neural networks]
-    
-    J --> M[Risk Prediction]
-    K --> M
-    L --> M
-    M --> N[Classification labels]
-    M --> O[Probabilistic scores]
-    
-    N --> P[Output & Reporting]
-    O --> P
-    P --> Q[Result tables]
-    P --> R[Plots & visualizations]
+## Installation (Development)
 
-%% Color definitions
-    style A fill:#d32f2f,stroke:#b71c1c,color:#ffffff
-    style B fill:#f57c00,stroke:#e65100,color:#ffffff
-    style C fill:#f57c00,stroke:#e65100,color:#ffffff
-    style D fill:#f57c00,stroke:#e65100,color:#ffffff
-    style E fill:#ffa000,stroke:#ff6f00,color:#ffffff
-    style F fill:#ffa000,stroke:#ff6f00,color:#ffffff
-    style G fill:#ffa000,stroke:#ff6f00,color:#ffffff
-    style H fill:#ffa000,stroke:#ff6f00,color:#ffffff
-    style I fill:#388e3c,stroke:#1b5e20,color:#ffffff
-    style J fill:#388e3c,stroke:#1b5e20,color:#ffffff
-    style K fill:#388e3c,stroke:#1b5e20,color:#ffffff
-    style L fill:#388e3c,stroke:#1b5e20,color:#ffffff
-    style M fill:#1976d2,stroke:#0d47a1,color:#ffffff
-    style N fill:#1976d2,stroke:#0d47a1,color:#ffffff
-    style O fill:#1976d2,stroke:#0d47a1,color:#ffffff
-    style P fill:#7b1fa2,stroke:#4a148c,color:#ffffff
-    style Q fill:#7b1fa2,stroke:#4a148c,color:#ffffff
-    style R fill:#7b1fa2,stroke:#4a148c,color:#ffffff
-```
-
----
-## Technical Stack 
-| Component          | Technology Stack                  | Version     |
-|--------------------|-----------------------------------|-------------|
-| Data Processing    | pandas, numpy, PySAM              | 2.0.3       |
-| Machine Learning   | TensorFlow, scikit-learn          | 2.12.0      |
-| Visualization      | Matplotlib, Plotly, Seaborn       | 3.7.1       |
-| Deployment         | Flask, Google Cloud               | 2.3.2       |
-
-
----
-## Installation
-
-### Prerequisites
-- Python 3.9+
-- pip
-- conda 
-
-### Setup
 ```bash
-# Clone the repository
 git clone https://github.com/Aridoge13/Kabosu
+cd Kabosu
 
-# Create and activate conda environment (recommended)
 conda create -n kabosu python=3.9
 conda activate kabosu
 
-# Install core dependencies
-pip install biopython matplotlib pandas numpy pysam seaborn scikit-learn tensorflow shap joblib snakemake
-
-# If you are unable to install tensorflow with pip, please activate the conda environment and install the dependencies on conda
-
-# Installing core dependencies on conda 
-conda install biopython matplotlib pandas numpy pysam seaborn scikit-learn tensorflow shap joblib
+pip install pandas numpy matplotlib seaborn scikit-learn
 ```
----
-## Contribution
-Contributions are welcome. Please submit issues or pull requests following the project guidelines.
 
----
-### Contributing
-We welcome contributions! Please:
-1. Fork the repository
-2. Create your feature branch (git checkout -b feature/AmazingFeature)
-3. Commit your changes (git commit -m 'Add some AmazingFeature')
-4. Push to the branch (git push origin feature/AmazingFeature)
-5. Open a Pull Request
+## Contributions
 
----
+This is a research-driven project.
+
+Contributions are welcome **if they align with the project philosophy**:
+- reproducibility over novelty
+- analysis over hype
+- clarity over performance claims
+
+Open an issue before major contributions.
+
 ## License
-See [LICENSE](License.md) for full terms.
 
----
+MIT License: [LICENSE](License.md)
+
 ## Contact
-For questions or support, 
-please contact: aritra.mukherjee98@gmail.com
-
+Email: aritra.mukherjee98@gmail.com
+Linkedin: www.linkedin.com/in/aritra-mukherjee-82b070125
+ORCID: https://orcid.org/0000-0002-6061-611X
