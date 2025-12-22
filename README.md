@@ -54,23 +54,18 @@ Core principles:
 
 ```mermaid
 flowchart TD
-    A["v0.1–v0.6 | Dataset-local analysis | Tabular only"]
-    B["v0.7–v0.8 | Cross-dataset synthesis"]
-    C["v0.9 | Unified tabular abstraction"]
-    D["v1.0–v1.9 | Progressive genomic integration"]
-    E["v2.0 | Consolidated system"]
+    A["v0.1–v0.6<br/>Dataset-local analysis<br/>(Tabular only)"]
 
-    A -->|Isolated analysis| B
-    B -->|Stability and equivalence| C
-    C -->|Documented failures| D
-    D -->|Ablation and stress tests| E
+    A -- |Isolated analysis| --> B["v0.7–v0.8<br/>Cross-dataset synthesis"]
+    B -- |Stability & equivalence| --> C["v0.9<br/>Unified tabular abstraction"]
+    C -- |Documented failures| --> D["v1.0–v1.9<br/>Progressive genomic integration"]
+    D -- |Ablation & stress tests| --> E["v2.0<br/>Consolidated system"]
 
     style A fill:#f57c00,stroke:#e65100,color:#ffffff
     style B fill:#ffa000,stroke:#ff6f00,color:#ffffff
     style C fill:#388e3c,stroke:#1b5e20,color:#ffffff
     style D fill:#1976d2,stroke:#0d47a1,color:#ffffff
     style E fill:#7b1fa2,stroke:#4a148c,color:#ffffff
-
 
 ```
 
