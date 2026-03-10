@@ -4,157 +4,64 @@
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Aridoge13/Kabosu)
 
----
-
-## Overview
-
-**Kabosu** is a research framework for studying **robust disease risk modeling across heterogeneous public datasets**, with a long-term goal of **biologically grounded, multi-modal integration**.
-
-The project deliberately prioritizes:
-- data understanding over premature modeling  
-- cross-dataset synthesis over single-dataset performance  
-- biological constraints over metric chasing  
-
-**Kabosu** is a research framework for studying **robust disease risk modeling across heterogeneous public datasets**, with a long-term goal of **biologically grounded, multi-modal integration**.
-
-The project deliberately prioritizes:
-- data understanding over premature modeling  
-- cross-dataset synthesis over single-dataset performance  
-- biological constraints over metric chasing  
-
-Kabosu is **not a clinical or diagnostic tool** and makes **no diagnostic or therapeutic claims**.  
-
-Its long-term research objective is to inform the development of **transparent, biologically constrained decision-support methodologies** that could, in the future, contribute to clinician-facing systems after appropriate validation.
-
+![Logo](/home/jijo/Projects/Kabosu/data/Untitled.png)
 
 ---
 
-## Project Philosophy
-
-**Do Only Good Everyday**: a commitment to methodological rigor, transparency, and harm minimization in computational health research.
-
-Most ML-for-health projects fail because they:
-- overfit single datasets
-- ignore dataset shift
-- treat genomics as feature concatenation
-- optimize metrics instead of understanding failure modes
-
-Kabosu is explicitly designed to avoid these traps.
-
-Core principles:
-- **Analysis before models**
-- **Synthesis before integration**
-- **Ablation before expansion**
-- **Biology as constraint, not decoration**
+**Kabosu** is an open‑source framework that integrates multi‑omics data (genomics, transcriptomics, proteomics, metabolomics) with deep learning to deliver interpretable predictions for disease risk, diagnosis, and personalized therapy. By combining polygenic risk scores (PRS) with pathway‑level analysis and in silico drug simulations, Kabosu aims to make precision medicine accessible, transparent, and computationally efficient, with a focus on running on the most modest hardware.
 
 
----
+## Vision
 
-## Versioned Roadmap (Authoritative)
+Personalized medicine promises earlier diagnosis, tailored therapies, and better outcomes, yet its adoption is hindered by fragmented data sources, computational bottlenecks, and a lack of interpretable models. Kabosu is designed to bridge this gap by:
 
-```mermaid
-flowchart TD
-    A["v0.1–v0.6<br/>Dataset-local analysis<br/>(Tabular only)"]
+- **Integrating** diverse biological data into a unified, analyzable framework.
+- **Predicting** disease susceptibility from individual and population‑level genetic variation.
+- **Simulating** drug effects on patient‑specific molecular pathways before clinical use.
+- **Empowering** researchers and clinicians with explainable AI and a user‑friendly interface.
 
-    A -- |Isolated analysis| --> B["v0.7–v0.8<br/>Cross-dataset synthesis"]
-    B -- |Stability & equivalence| --> C["v0.9<br/>Unified tabular abstraction"]
-    C -- |Documented failures| --> D["v1.0–v1.9<br/>Progressive genomic integration"]
-    D -- |Ablation & stress tests| --> E["v2.0<br/>Consolidated system"]
+## Key Features currently planned 
+| Feature | Description |
+|---------|-------------|
+| **Multi‑Omics Integration** | Seamlessly combine genomics (WGS/WES), transcriptomics (RNA‑seq), proteomics, and metabolomics data for a holistic view of disease mechanisms. |
+| **AI‑Driven Risk Prediction** | Use feed‑forward neural networks (FFNN) and gradient‑boosted decision trees (GBDT) to model disease susceptibility. PRS calculated via PLINK are incorporated as features, leveraging both statistical genetics and machine learning. |
+| **Pathway‑Aware Diagnosis** | Map patient omics profiles onto biochemical pathways (KEGG, Reactome) to identify dysregulated modules and link them to disease phenotypes. |
+| **In Silico Drug Testing** | Simulate drug‑target interactions on patient‑specific pathway models to predict efficacy and adverse effects, enabling therapy personalization. |
+| **Explainable AI** | SHAP, LIME, and attention mechanisms provide interpretable outputs, building trust with clinicians and researchers. |
+| **Efficiency‑First Design** | Optimized for time complexity and minimal hardware requirements through careful algorithm selection, parallelization, and use of state‑of‑the‑art open‑source libraries. |
+| **Open & Extensible** | Fully open‑source, modular architecture invites community contributions. Easily plug in new data types, models, or visualization tools. |
 
-    style A fill:#f57c00,stroke:#e65100,color:#ffffff
-    style B fill:#ffa000,stroke:#ff6f00,color:#ffffff
-    style C fill:#388e3c,stroke:#1b5e20,color:#ffffff
-    style D fill:#1976d2,stroke:#0d47a1,color:#ffffff
-    style E fill:#7b1fa2,stroke:#4a148c,color:#ffffff
 
-```
+## How It Works (Planned Development)
 
-### v0.1 – v0.6: Dataset-local analysis (Tabular only)
-Each public dataset is analyzed **in isolation** to identify:
-- signal vs noise
-- label instability
-- feature fragility
-- dataset-specific artefacts
+Kabosu treats PRS as one informative layer within a much broader integrative framework. The workflow consists of several modular stages:
 
-No cross-dataset modeling.  
-No genomics.
+1. **Data Ingestion & Preprocessing**  
+   - Accepts raw or pre‑processed data: VCF (genotypes), FASTQ/expression matrices (transcriptomics), MS data (proteomics), etc.  
+   - Quality control, normalization, and batch correction using standard bioinformatics tools.
 
-Deliverables:
-- dataset reports
-- negative results
-- failure characterizations
+2. **Feature Engineering**  
+   - **Genomics**: Compute polygenic risk scores via PLINK (clumping + thresholding, or LDpred). Optionally include rare variants, structural variants.  
+   - **Transcriptomics**: Differential expression, co‑expression networks, pathway enrichment scores.  
+   - **Proteomics / Metabolomics**: Abundance profiles, pathway activity scores.  
+   - All features are harmonized into a unified patient‑level matrix.
 
----
+3. **Machine Learning Modeling**  
+   - Train ensemble models (GBDT, Random Forest) or neural networks (FFNN) to predict disease risk, severity, or treatment response.  
+   - Models can incorporate both omics‑derived features and clinical covariates.  
+   - Cross‑validation and permutation tests ensure robust evaluation.
 
-### v0.7 – v0.8: Cross-dataset synthesis
-Insights from multiple tabular datasets are synthesized to study:
-- feature equivalence classes
-- stability across populations
-- agreement / disagreement in direction of effect
-- domain shift behavior
+4. **Pathway & Network Analysis**  
+   - Map features onto biological pathways (using tools like GSEA, Cytoscape).  
+   - Identify key drivers and modules associated with the phenotype.
 
-This phase is **analysis**, not model building.
+5. **Drug Simulation**  
+   - Use deep learning‑based drug‑target interaction models (e.g., graph neural networks on molecular structures) to predict binding affinities.  
+   - Simulate how candidate drugs modulate the patient’s dysregulated pathways.
 
----
-
-### v0.9: Unified tabular abstraction
-A single tabular model is constructed **only after synthesis** to test:
-- whether abstractions generalize
-- which signals survive dataset shift
-
-This model is diagnostic, not final.
-
----
-
-### v1.0 – v1.9: Progressive genomic integration
-Genomic data is integrated **incrementally**, not all at once.
-
-Each genomic modality is admitted **only if it addresses a documented failure** from earlier versions.
-
-Planned progression:
-- Genetic risk layers (e.g. GWAS-level summaries)
-- Expression / regulatory signals
-- Pathway and network constraints
-- Interaction-aware biological structure
-
-Every layer is stress-tested and ablated.
-
----
-
-### v2.0: Consolidated system
-v2.0 is a **minimal, biologically constrained framework** containing:
-- only components that survived ablation
-- documented contributions and failure modes
-- explicit limits of validity
-
----
-
-## Current Status
-
-**Status:** Active research development  
-**Current focus:** v0.x dataset-local analysis and synthesis
-
-What Kabosu currently does:
-- exploratory and confirmatory analysis of public tabular health datasets
-- investigation of feature stability and dataset shift
-- controlled experiments on synthetic adversarial test data
-
-What Kabosu does **not** yet do:
-- clinical prediction
-- multi-omics integration
-- deployment-facing inference
-
----
-
-## Synthetic Testing Strategy
-
-Synthetic data is used **only** for adversarial testing:
-- covariate shift
-- label noise injection
-- missing-not-at-random simulation
-- spurious correlation stress tests
-
-Synthetic agreement alone is **not considered validation**.
+6. **Interpretation & Visualization**  
+   - Generate reports with feature importance, pathway enrichment, and drug recommendations.  
+   - Web‑based dashboard for interactive exploration (React frontend, Flask backend).
 
 ---
 
@@ -162,17 +69,25 @@ Synthetic agreement alone is **not considered validation**.
 
 | Component | Tools |
 |---------|------|
-| Data analysis | pandas, numpy |
-| ML (experimental) | scikit-learn, lightgbm |
-| Visualization | matplotlib, seaborn |
-| Workflow (planned) | Snakemake |
-| Genomics (future) | biopython, pysam |
+| **Data Processing** | Python (pandas, numpy, scipy, Biopython, pysam), Snakemake/Nextflow |
+| **Machine Learning** | TensorFlow, PyTorch, scikit‑learn, XGBoost, LightGBM, CatBoost |
+| **Explainability** | SHAP, LIME, Captum |
+| **Genetics Tools** | PLINK, bcftools, samtools, LDlink |
+| **Pathway Analysis** | GSEA, Enrichr, Cytoscape, NetworkX, Pathway Commons |
+| **Visualization** | matplotlib, seaborn, plotly, bokeh |
+| **Web Framework** | React.js (frontend), Flask/Django (backend), PostgreSQL/MongoDB |
+| **Cloud / HPC** | AWS/GCP/Azure, Docker, Kubernetes (optional) |
 
-Dependencies evolve with project phases.
+All components are open‑source and carefully selected to balance performance with accessibility.
+
+Dependencies will evolve with project phases.
 
 ---
 
+
 ## Installation (Development)
+
+Kabosu is under active development. A stable release will be available soon. For now, you can clone the repository and set up a development environment:
 
 ```bash
 git clone https://github.com/Aridoge13/Kabosu
@@ -181,7 +96,6 @@ cd Kabosu
 conda create -n kabosu python=3.9
 conda activate kabosu
 
-pip install pandas numpy matplotlib seaborn scikit-learn
 ```
 
 ## Contributions
@@ -195,6 +109,10 @@ Contributions are welcome **if they align with the project philosophy**:
 
 Open an issue before major contributions.
 
+## Acknowledgement
+
+We thank the open‑source community and the developers of the countless libraries that make Kabosu possible. Special thanks to the contributors of TCGA, GTEx, PLINK, and the PyData ecosystem.
+
 ## License
 
 MIT License: [LICENSE](License.md)
@@ -203,3 +121,6 @@ MIT License: [LICENSE](License.md)
 - Email: aritra.mukherjee98@gmail.com
 - Linkedin: www.linkedin.com/in/aritra-mukherjee-82b070125
 - ORCID: https://orcid.org/0000-0002-6061-611X
+
+
+Kabosu is powered by the message - Do Only Good Everyday. 
