@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Aridoge13/Kabosu)
 
-![Logo](/home/jijo/Projects/Kabosu/data/Untitled.png)
+![Logo](/home/jijo/Projects/Kabosu/src/Untitled.png)
 
 ---
 
