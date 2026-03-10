@@ -4,8 +4,6 @@
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Aridoge13/Kabosu)
 
-[![Logo](Kabosu/src/Untitled.png)]
-
 ---
 
 **Kabosu** is an open‑source framework that integrates multi‑omics data (genomics, transcriptomics, proteomics, metabolomics) with deep learning to deliver interpretable predictions for disease risk, diagnosis, and personalized therapy. By combining polygenic risk scores (PRS) with pathway‑level analysis and in silico drug simulations, Kabosu aims to make precision medicine accessible, transparent, and computationally efficient, with a focus on running on the most modest hardware.
